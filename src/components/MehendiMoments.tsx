@@ -204,17 +204,17 @@ const usMoments = [
 
                     {/* Sweet note revealed on hover/tap */}
                     <div className={`absolute inset-0 bg-gradient-to-br from-amber-100/95 via-orange-100/95 to-rose-100/95 backdrop-blur-sm flex items-center justify-center transition-all duration-700 rounded-lg ${tappedCards.has(pattern.id) ? 'opacity-100' : 'opacity-0 md:group-hover:opacity-100'}`}>
-                      <div className={`text-center p-3 transform transition-all duration-700 ${tappedCards.has(pattern.id) ? 'scale-100 translate-y-0' : 'scale-95 translate-y-4'}`}>
+                      <div className={`text-center p-2 w-full transform transition-all duration-700 ${tappedCards.has(pattern.id) ? 'scale-100 translate-y-0' : 'scale-95 translate-y-4'}`}>
                         <motion.div
                           initial={{ scale: 0 }}
                           animate={{ scale: tappedCards.has(pattern.id) ? 1 : 0 }}
                           transition={{ duration: 0.5, delay: 0.2 }}
                           className="mb-2"
                         >
-                          <Sparkles className="w-5 h-5 mx-auto text-amber-500 animate-gentle-bounce" />
+                          <Sparkles className="w-4 h-4 mx-auto text-amber-500 animate-gentle-bounce" />
                         </motion.div>
-                        <div className="bg-white/90 backdrop-blur-sm p-3 rounded-lg border border-amber-200 shadow-md">
-                          <p className="text-amber-800 text-sm italic font-medium leading-relaxed">
+                        <div className="bg-white/90 backdrop-blur-sm p-2 rounded-lg border border-amber-200 shadow-md mx-2">
+                          <p className="text-amber-800 text-xs italic font-medium leading-relaxed text-center">
                             {pattern.sweetNote}
                           </p>
                         </div>

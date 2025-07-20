@@ -54,7 +54,7 @@ const GiftGallery = () => {
       description: 'Anklets that announce your steps',
       image: anklet,
       color: 'from-cyan-400 to-blue-600',
-      sweetNote: 'Sweet music with every graceful step, my love 🎵'
+      sweetNote: 'Sweet music with every step, my love 🎵'
     },
 
     {
@@ -198,8 +198,8 @@ const GiftGallery = () => {
                     {item.description}
                   </p>
                   
-                  {/* Sweet love note - always visible when card is revealed */}
-                  <div className={`transition-all duration-700 ${tappedCards.has(item.id) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                  {/* Sweet love note - visible when card is revealed or on hover */}
+                  <div className={`transition-all duration-700 ${tappedCards.has(item.id) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0'}`}>
                     <div className="bg-gradient-to-r from-rose-100 via-emerald-100 to-amber-100 p-4 rounded-lg border border-rose-200 shadow-sm">
                       <div className="text-center mb-3">
                         <Heart className="w-5 h-5 mx-auto text-rose-500 animate-heartbeat" fill="currentColor" />
